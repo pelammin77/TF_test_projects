@@ -20,6 +20,9 @@ sess.run(init)
 
 for i in range(10000):
     sess.run(train,{x: [1, 2, 3, 4], y: [0, -1, -2, -3]})
+    if i % 1000 == 0:
+        print(sess.run([W, b]))
+
 
 
 print(sess.run([W, b])) # W = -0.99999911 b =  0.99999744 very close to  -1 and 1
